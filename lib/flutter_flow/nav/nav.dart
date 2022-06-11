@@ -80,15 +80,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => LoginWidget(),
             ),
             FFRoute(
+              name: 'register',
+              path: 'register',
+              builder: (context, params) => RegisterWidget(),
+            ),
+            FFRoute(
               name: 'home',
               path: 'home',
               requireAuth: true,
               builder: (context, params) => HomeWidget(),
             ),
             FFRoute(
-              name: 'register',
-              path: 'register',
-              builder: (context, params) => RegisterWidget(),
+              name: 'add_image',
+              path: 'addImage',
+              requireAuth: true,
+              builder: (context, params) => AddImageWidget(),
+            ),
+            FFRoute(
+              name: 'image_details',
+              path: 'imageDetails',
+              requireAuth: true,
+              builder: (context, params) => ImageDetailsWidget(),
+            ),
+            FFRoute(
+              name: 'profile',
+              path: 'profile',
+              requireAuth: true,
+              builder: (context, params) => ProfileWidget(),
+            ),
+            FFRoute(
+              name: 'gallery',
+              path: 'gallery',
+              requireAuth: true,
+              builder: (context, params) => GalleryWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
@@ -251,12 +275,12 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50,
-                    height: 50,
-                    child: CircularProgressIndicator(
-                      color: FlutterFlowTheme.of(context).primaryColor,
+              ? Container(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  child: Builder(
+                    builder: (context) => Image.asset(
+                      'assets/images/logo.png',
+                      fit: BoxFit.cover,
                     ),
                   ),
                 )

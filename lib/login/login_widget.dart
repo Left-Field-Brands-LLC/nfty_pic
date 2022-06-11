@@ -69,7 +69,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                           alignment: AlignmentDirectional(-1, 0),
                           child: Text(
-                            'Sign In',
+                            FFLocalizations.of(context).getText(
+                              'm1lvz66b' /* Sign In */,
+                            ),
                             style: FlutterFlowTheme.of(context).title2.override(
                                   fontFamily: 'Lexend Deca',
                                   color: Color(0xFF090F13),
@@ -103,7 +105,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 context.pushNamed('register');
                               },
                               child: Text(
-                                'Sign Up',
+                                FFLocalizations.of(context).getText(
+                                  'udckyewa' /* Sign Up */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .title2
                                     .override(
@@ -125,7 +129,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          'Sign in to share more photos',
+                          FFLocalizations.of(context).getText(
+                            '0q4l2uj1' /* Sign in to share more photos */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyText2.override(
                                     fontFamily: 'Lexend Deca',
@@ -143,7 +149,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       controller: emailAddressController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelText: 'Email',
+                        labelText: FFLocalizations.of(context).getText(
+                          'gpfk24pf' /* Email */,
+                        ),
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
                                   fontFamily: 'Lexend Deca',
@@ -191,7 +199,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       controller: passwordController,
                       obscureText: !passwordVisibility,
                       decoration: InputDecoration(
-                        labelText: 'Password',
+                        labelText: FFLocalizations.of(context).getText(
+                          'peewk13o' /* Password */,
+                        ),
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
                                   fontFamily: 'Lexend Deca',
@@ -270,7 +280,9 @@ class _LoginWidgetState extends State<LoginWidget> {
 
                       context.goNamedAuth('home', mounted);
                     },
-                    text: 'Login',
+                    text: FFLocalizations.of(context).getText(
+                      '6ca18yw1' /* Login */,
+                    ),
                     options: FFButtonOptions(
                       width: 150,
                       height: 50,
@@ -302,7 +314,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                     onPressed: () async {
                       context.goNamed('home');
                     },
-                    text: 'Continue as Guest',
+                    text: FFLocalizations.of(context).getText(
+                      'vairuprg' /* Continue as Guest */,
+                    ),
                     options: FFButtonOptions(
                       width: 230,
                       height: 50,
