@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "42386886625",
+    "project_id": "nftypic",
+    "storage_bucket": "nftypic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42386886625:android:d7e9509f9ebea223a64ca0",
+        "android_client_info": {
+          "package_name": "com.encodehack.nftypic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42386886625-akqehl523fhnbledvno52c6f67il079m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.encodehack.nftypic",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "42386886625-rtv0ql4d4f0qt1ag16kcjrba31ed8b47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcfc_aLaq750SKv-z5jtNXCBXmHEa8jfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42386886625-rtv0ql4d4f0qt1ag16kcjrba31ed8b47.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "42386886625-aouucc620cu72dmb51e8jjgviuof82m6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.encodehack.nftypic"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
