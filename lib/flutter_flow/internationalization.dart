@@ -44,42 +44,77 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // login
   {
-    '4xdbcxtj': {
+    'm1lvz66b': {
       'en': 'Sign In',
       'fr': '',
     },
-    'pcsl38i5': {
+    'udckyewa': {
       'en': 'Sign Up',
       'fr': '',
     },
-    'oylodb6m': {
+    '0q4l2uj1': {
       'en': 'Sign in to share more photos',
       'fr': '',
     },
-    'g8srlca9': {
+    'gpfk24pf': {
       'en': 'Email',
       'fr': '',
     },
-    'kxxfcgt8': {
+    'peewk13o': {
       'en': 'Password',
       'fr': '',
     },
-    'fv07wyd1': {
+    '6ca18yw1': {
       'en': 'Login',
       'fr': '',
     },
-    'djevz245': {
+    'vairuprg': {
+      'en': 'Continue as Guest',
+      'fr': '',
+    },
+  },
+  // register
+  {
+    '26a3g2tu': {
+      'en': 'Sign In',
+      'fr': '',
+    },
+    'vukd35yc': {
+      'en': 'Sign Up',
+      'fr': '',
+    },
+    '810ueda4': {
+      'en': 'Get started by creating an account below.',
+      'fr': '',
+    },
+    'i45t3dhw': {
+      'en': 'Email',
+      'fr': '',
+    },
+    's2hvwgvr': {
+      'en': 'Password',
+      'fr': '',
+    },
+    '7we2h5nv': {
+      'en': 'Confirm Passward',
+      'fr': '',
+    },
+    '98x3bhop': {
+      'en': 'Get Started',
+      'fr': '',
+    },
+    'dvxg2h1n': {
       'en': 'Continue as Guest',
       'fr': '',
     },
   },
   // home
   {
-    'chkzmcqr': {
+    '31jphqnk': {
       'en': 'NFTy',
       'fr': '',
     },
-    'b0mybxah': {
+    'wttsuovx': {
       'en': 'Pic',
       'fr': '',
     },
@@ -96,65 +131,230 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
   },
-  // register
+  // add_image
   {
-    '9nh5nr4e': {
-      'en': 'Sign In',
+    'cpnh24yx': {
+      'en': 'Add Image',
       'fr': '',
     },
-    'br10y0uh': {
-      'en': 'Sign Up',
+    'dqchwjl7': {
+      'en': 'Enter post details here...',
       'fr': '',
     },
-    'w4ddou9j': {
-      'en': 'Get started by creating an account below.',
+    'zri0jsmt': {
+      'en': 'Art',
       'fr': '',
     },
-    'ss0rw2ej': {
-      'en': 'Email',
+    'uc7w4dzs': {
+      'en': 'Portrait',
       'fr': '',
     },
-    'ofc8t1ud': {
-      'en': 'Password',
+    'zsgrqb3j': {
+      'en': 'Landscape',
       'fr': '',
     },
-    '57w3rkvl': {
-      'en': 'Confirm Passward',
+    '5a9unxg1': {
+      'en': 'Health',
       'fr': '',
     },
-    'dq3npqkd': {
-      'en': 'Get Started',
+    '24nbnkji': {
+      'en': 'Fitness',
       'fr': '',
     },
-    '9x7do0r1': {
-      'en': 'Continue as Guest',
+    'z5eid5sv': {
+      'en': 'Select a Tag',
+      'fr': '',
+    },
+    '9wo34cb6': {
+      'en': 'Tag Location',
+      'fr': '',
+    },
+    '0o56ybrt': {
+      'en': 'Add Image',
+      'fr': '',
+    },
+  },
+  // image_details
+  {
+    'xb91bsxc': {
+      'en': 'Title',
+      'fr': '',
+    },
+    '4sdrlfkq': {
+      'en': 'Owner Name',
+      'fr': '',
+    },
+    '63zrb3wn': {
+      'en':
+          'Sporty style from the archives inspires this iconic track top. A stand-up collar and the signature sheen of tricot give it a retro vibe. Made for relaxing between sessions, the full-zip jacket has a recycled polyester build.',
+      'fr': '',
+    },
+    'jm710wn9': {
+      'en': 'Mint This Image',
+      'fr': '',
+    },
+  },
+  // profile
+  {
+    'pqqv1wlq': {
+      'en': '[User Name Here]',
+      'fr': '',
+    },
+    'xmcu37pq': {
+      'en': 'User.name@domainname.com',
+      'fr': '',
+    },
+    'o8x7t5yc': {
+      'en': 'Account Settings',
+      'fr': '',
+    },
+    'p5gczf51': {
+      'en': 'Order History',
+      'fr': '',
+    },
+    '72l02lmm': {
+      'en': 'Settings',
+      'fr': '',
+    },
+    '9kqgwunf': {
+      'en': 'Notifications',
+      'fr': '',
+    },
+    'aw25gdz4': {
+      'en': 'Change Password',
+      'fr': '',
+    },
+    'tnvl2w1b': {
+      'en': 'Logout',
+      'fr': '',
+    },
+    '4x1jz1za': {
+      'en': 'My Profile',
+      'fr': '',
+    },
+  },
+  // gallery
+  {
+    'wafhrray': {
+      'en': 'My Images',
+      'fr': '',
+    },
+    '377jlqj5': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    '3slie2k2': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    'riu68oo0': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    '31rwuf4k': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    'rwqnip23': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    'si1jfplb': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    'r68lm9kp': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    'c50ikrnp': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    'hz2mpn6t': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    'v1m7jtv5': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    '1na1y5p9': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    'rav712bv': {
+      'en': 'Category Name',
+      'fr': '',
+    },
+    '3jfikike': {
+      'en': 'Home',
       'fr': '',
     },
   },
   // view_all
   {
-    'qam8um8d': {
+    'dgfaviqw': {
       'en': 'Fitness',
       'fr': '',
     },
-    'f0c9l2jm': {
-      'en': 'The Running Ragamuffins',
+    'fvp0sr4a': {
+      'en': 'Title Will Go Here',
       'fr': '',
     },
-    '7g7wolq9': {
+    '78ptr3yv': {
       'en': 'Name',
       'fr': '',
     },
-    'kmzyheuf': {
-      'en': 'Health',
+    'gfnne6mq': {
+      'en': 'Fitness',
       'fr': '',
     },
-    'a89tve07': {
-      'en': 'Dads for Gas-free Groceries',
+    'i14o5fou': {
+      'en': 'Title Will Go Here',
       'fr': '',
     },
-    'tanwb636': {
+    'ahrhx0uy': {
       'en': 'Name',
+      'fr': '',
+    },
+    'qfj4enl3': {
+      'en': 'Fitness',
+      'fr': '',
+    },
+    'q3inqq28': {
+      'en': 'Title Will Go Here',
+      'fr': '',
+    },
+    'ktph72qg': {
+      'en': 'Name',
+      'fr': '',
+    },
+  },
+  // select_wallet
+  {
+    'vvvme32t': {
+      'en': 'Select Wallet to Mint With',
+      'fr': '',
+    },
+    '0vbn1js5': {
+      'en': 'Subtitle for the needs of description',
+      'fr': '',
+    },
+    'y77dn71t': {
+      'en': 'Wallet Name',
+      'fr': '',
+    },
+    'ag3dxfw6': {
+      'en': 'Wallet Name',
+      'fr': '',
+    },
+    '80fywaiw': {
+      'en': 'Wallet Name',
+      'fr': '',
+    },
+    'vg4txoec': {
+      'en': 'Wallet Name',
       'fr': '',
     },
   },

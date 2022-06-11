@@ -113,7 +113,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                             ),
                             alignment: AlignmentDirectional(-1, 0),
                             child: Text(
-                              'Sign In',
+                              FFLocalizations.of(context).getText(
+                                '26a3g2tu' /* Sign In */,
+                              ),
                               style:
                                   FlutterFlowTheme.of(context).title2.override(
                                         fontFamily: 'Lexend Deca',
@@ -132,7 +134,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                           ),
                           alignment: AlignmentDirectional(-1, 0),
                           child: Text(
-                            'Sign Up',
+                            FFLocalizations.of(context).getText(
+                              'vukd35yc' /* Sign Up */,
+                            ),
                             style: FlutterFlowTheme.of(context).title2.override(
                                   fontFamily: 'Lexend Deca',
                                   color: Color(0xFF090F13),
@@ -150,7 +154,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          'Get started by creating an account below.',
+                          FFLocalizations.of(context).getText(
+                            '810ueda4' /* Get started by creating an acc... */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyText2.override(
                                     fontFamily: 'Lexend Deca',
@@ -168,7 +174,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                       controller: emailAddressController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelText: 'Email',
+                        labelText: FFLocalizations.of(context).getText(
+                          'i45t3dhw' /* Email */,
+                        ),
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
                                   fontFamily: 'Lexend Deca',
@@ -216,7 +224,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                       controller: passwordController,
                       obscureText: !passwordVisibility,
                       decoration: InputDecoration(
-                        labelText: 'Password',
+                        labelText: FFLocalizations.of(context).getText(
+                          's2hvwgvr' /* Password */,
+                        ),
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
                                   fontFamily: 'Lexend Deca',
@@ -277,7 +287,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                       controller: confirmPasswordController,
                       obscureText: !confirmPasswordVisibility,
                       decoration: InputDecoration(
-                        labelText: 'Confirm Passward',
+                        labelText: FFLocalizations.of(context).getText(
+                          '7we2h5nv' /* Confirm Passward */,
+                        ),
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
                                   fontFamily: 'Lexend Deca',
@@ -377,7 +389,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
 
                       context.goNamedAuth('home', mounted);
                     },
-                    text: 'Get Started',
+                    text: FFLocalizations.of(context).getText(
+                      '98x3bhop' /* Get Started */,
+                    ),
                     options: FFButtonOptions(
                       width: 170,
                       height: 50,
@@ -409,7 +423,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                     onPressed: () async {
                       context.goNamed('home');
                     },
-                    text: 'Continue as Guest',
+                    text: FFLocalizations.of(context).getText(
+                      'dvxg2h1n' /* Continue as Guest */,
+                    ),
                     options: FFButtonOptions(
                       width: 230,
                       height: 50,
