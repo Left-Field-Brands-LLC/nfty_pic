@@ -57,8 +57,7 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                         queryBuilder: (imagesRecord) => imagesRecord
                             .where('created_by',
                                 isEqualTo: currentUserReference)
-                            .where('purchased_by',
-                                isEqualTo: currentUserReference),
+                            .orderBy('created_timestamp', descending: true),
                       ),
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.

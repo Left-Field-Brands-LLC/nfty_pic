@@ -16,8 +16,9 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
   Widget build(BuildContext context) {
     return StreamBuilder<List<ImagesRecord>>(
       stream: queryImagesRecord(
-        queryBuilder: (imagesRecord) =>
-            imagesRecord.where('minted', isEqualTo: false),
+        queryBuilder: (imagesRecord) => imagesRecord
+            .where('minted', isEqualTo: false)
+            .orderBy('created_timestamp', descending: true),
       ),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.

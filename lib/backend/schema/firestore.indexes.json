@@ -1,3 +1,32 @@
 {
-  "indexes": []
+  "indexes": [
+    {
+      "collectionGroup": "images",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "minted",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "created_timestamp",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "images",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "created_by",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "created_timestamp",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
 }
