@@ -129,7 +129,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Add Image',
       'fr': '',
     },
-    'zjdajffj': {
+    'xdmvovaq': {
       'en': 'Title',
       'fr': '',
     },
@@ -281,6 +281,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ls0esmbo': {
       'en': '',
+      'fr': '',
+    },
+  },
+  // filtered_list
+  {
+    'b667d5es': {
+      'en': 'Air Jordan XXXVI',
+      'fr': '',
+    },
+    'fxdg4407': {
+      'en': '\$185.00',
+      'fr': '',
+    },
+    'grenzlkw': {
+      'en': 'Produced by Nike',
+      'fr': '',
+    },
+    '0ovibslj': {
+      'en': 'Lebron 19',
+      'fr': '',
+    },
+    '97d3zjr8': {
+      'en': '\$200.00',
+      'fr': '',
+    },
+    'xyrgoh0s': {
+      'en': 'Produced by Nike',
+      'fr': '',
+    },
+    't0t7fzax': {
+      'en': 'Products',
       'fr': '',
     },
   },

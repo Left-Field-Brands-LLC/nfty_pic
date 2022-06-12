@@ -102,17 +102,28 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     FlutterFlowTheme.of(context).primaryBtnText,
                                 shape: BoxShape.circle,
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  FaIcon(
-                                    FontAwesomeIcons.paintBrush,
-                                    color:
-                                        FlutterFlowTheme.of(context).grayIcon,
-                                    size: 24,
-                                  ),
-                                ],
+                              child: InkWell(
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'filtered_list',
+                                    queryParams: {
+                                      'listSelected': serializeParam(
+                                          'Art', ParamType.String),
+                                    }.withoutNulls,
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    FaIcon(
+                                      FontAwesomeIcons.paintBrush,
+                                      color:
+                                          FlutterFlowTheme.of(context).grayIcon,
+                                      size: 24,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             Container(
