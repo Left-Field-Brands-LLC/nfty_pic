@@ -16,6 +16,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'profile'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -148,6 +154,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       ),
                       child: InkWell(
                         onTap: () async {
+                          logFirebaseEvent('PROFILE_PAGE_Row_s2v3q2mg_ON_TAP');
+                          logFirebaseEvent('Row_Navigate-To');
                           context.pushNamed('create_profile');
                         },
                         child: Row(
@@ -353,6 +361,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                         child: FFButtonWidget(
                           onPressed: () async {
+                            logFirebaseEvent('PROFILE_PAGE_LOGOUT_BTN_ON_TAP');
+                            logFirebaseEvent('Button_Auth');
                             GoRouter.of(context).prepareAuthEvent();
                             await signOut();
                             context.goNamedAuth('login', mounted);

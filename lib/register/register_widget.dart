@@ -57,6 +57,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
     emailAddressController = TextEditingController();
     passwordController = TextEditingController();
     passwordVisibility = false;
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'register'});
   }
 
   @override
@@ -94,6 +95,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                       children: [
                         InkWell(
                           onTap: () async {
+                            logFirebaseEvent(
+                                'REGISTER_PAGE_Container_bd1zmuoe_ON_TAP');
+                            logFirebaseEvent('Container_Navigate-To');
                             context.goNamed(
                               'login',
                               extra: <String, dynamic>{
@@ -356,6 +360,8 @@ class _RegisterWidgetState extends State<RegisterWidget>
                 children: [
                   FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent('REGISTER_PAGE_GET_STARTED_BTN_ON_TAP');
+                      logFirebaseEvent('Button_Auth');
                       GoRouter.of(context).prepareAuthEvent();
                       if (passwordController?.text !=
                           confirmPasswordController?.text) {
@@ -387,6 +393,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                           .doc(user.uid)
                           .update(usersCreateData);
 
+                      logFirebaseEvent('Button_Navigate-To');
                       context.pushNamedAuth('create_profile', mounted);
                     },
                     text: FFLocalizations.of(context).getText(
@@ -421,6 +428,8 @@ class _RegisterWidgetState extends State<RegisterWidget>
                 children: [
                   FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent('REGISTER_CONTINUE_AS_GUEST_BTN_ON_TAP');
+                      logFirebaseEvent('Button_Navigate-To');
                       context.goNamed('home');
                     },
                     text: FFLocalizations.of(context).getText(
@@ -463,6 +472,8 @@ class _RegisterWidgetState extends State<RegisterWidget>
                             size: 20,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent('REGISTER_PAGE_google_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_Navigate-To');
                             context.goNamed('home');
                           },
                         ),
@@ -478,6 +489,8 @@ class _RegisterWidgetState extends State<RegisterWidget>
                             size: 20,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent('REGISTER_PAGE_apple_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_Navigate-To');
                             context.goNamed('home');
                           },
                         ),
@@ -493,6 +506,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                             size: 20,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent(
+                                'REGISTER_PAGE_facebookF_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_Navigate-To');
                             context.goNamed('home');
                           },
                         ),

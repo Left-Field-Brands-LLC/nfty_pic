@@ -173,6 +173,8 @@ class _SideNavWidgetState extends State<SideNavWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 20),
                 child: InkWell(
                   onTap: () async {
+                    logFirebaseEvent('SIDE_NAV_COMP_Container_kqk85u7t_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     context.pushNamed('add_image');
                   },
                   child: Container(

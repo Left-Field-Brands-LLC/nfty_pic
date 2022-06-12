@@ -27,6 +27,7 @@ class _AddImageWidgetState extends State<AddImageWidget> {
   @override
   void initState() {
     super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'add_image'});
     textController1 = TextEditingController();
     textController2 = TextEditingController();
   }
@@ -69,6 +70,9 @@ class _AddImageWidgetState extends State<AddImageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                           child: InkWell(
                             onTap: () async {
+                              logFirebaseEvent(
+                                  'ADD_IMAGE_PAGE_userImage_ON_TAP');
+                              logFirebaseEvent('userImage_Upload-Photo-Video');
                               final selectedMedia =
                                   await selectMediaWithSourceBottomSheet(
                                 context: context,
@@ -280,6 +284,9 @@ class _AddImageWidgetState extends State<AddImageWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 30),
               child: FFButtonWidget(
                 onPressed: () async {
+                  logFirebaseEvent('ADD_IMAGE_PAGE_ADD_IMAGE_BTN_ON_TAP');
+                  logFirebaseEvent('Button_Backend-Call');
+
                   final imagesCreateData = createImagesRecordData(
                     createdTimestamp: getCurrentTimestamp,
                     createdBy: currentUserReference,

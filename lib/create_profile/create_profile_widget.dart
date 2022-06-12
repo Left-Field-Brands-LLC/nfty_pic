@@ -27,6 +27,8 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
     super.initState();
     emailAddressController = TextEditingController();
     yourNameController = TextEditingController();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'create_profile'});
   }
 
   @override
@@ -37,7 +39,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
         preferredSize: Size.fromHeight(100),
         child: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-          automaticallyImplyLeading: false,
+          automaticallyImplyLeading: true,
           flexibleSpace: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 14),
             child: Column(
@@ -48,7 +50,9 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                   child: Text(
-                    'Create Profile',
+                    FFLocalizations.of(context).getText(
+                      'd3nki2e5' /* Create Profile */,
+                    ),
                     style: FlutterFlowTheme.of(context).title2.override(
                           fontFamily: 'Poppins',
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -89,7 +93,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                         shape: BoxShape.circle,
                       ),
                       child: Image.network(
-                        'https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&q=80',
+                        uploadedFileUrl,
                         fit: BoxFit.fitWidth,
                       ),
                     ),
@@ -105,6 +109,9 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                 children: [
                   FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent(
+                          'CREATE_PROFILE_CHANGE_PHOTO_BTN_ON_TAP');
+                      logFirebaseEvent('Button_Upload-Photo-Video');
                       final selectedMedia =
                           await selectMediaWithSourceBottomSheet(
                         context: context,
@@ -140,7 +147,9 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                         }
                       }
                     },
-                    text: 'Change Photo',
+                    text: FFLocalizations.of(context).getText(
+                      'zagop9us' /* Change Photo */,
+                    ),
                     options: FFButtonOptions(
                       width: 130,
                       height: 40,
@@ -170,7 +179,9 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                 controller: yourNameController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: 'Your Name',
+                  labelText: FFLocalizations.of(context).getText(
+                    'lxyesg45' /* Your Name */,
+                  ),
                   labelStyle: FlutterFlowTheme.of(context).bodyText2,
                   hintStyle: FlutterFlowTheme.of(context).bodyText2,
                   enabledBorder: OutlineInputBorder(
@@ -200,7 +211,9 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                 controller: emailAddressController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: 'Email Address',
+                  labelText: FFLocalizations.of(context).getText(
+                    'e0nyhw05' /* Email Address */,
+                  ),
                   labelStyle: FlutterFlowTheme.of(context).bodyText2,
                   hintStyle: FlutterFlowTheme.of(context).bodyText2,
                   enabledBorder: OutlineInputBorder(
@@ -230,15 +243,21 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    logFirebaseEvent('CREATE_PROFILE_SAVE_CHANGES_BTN_ON_TAP');
+                    logFirebaseEvent('Button_Backend-Call');
+
                     final usersUpdateData = createUsersRecordData(
                       displayName: yourNameController.text,
                       email: emailAddressController.text,
                       photoUrl: uploadedFileUrl,
                     );
                     await currentUserReference.update(usersUpdateData);
+                    logFirebaseEvent('Button_Navigate-To');
                     context.pushNamed('home');
                   },
-                  text: 'Save Changes',
+                  text: FFLocalizations.of(context).getText(
+                    'qo1a3i8y' /* Save Changes */,
+                  ),
                   options: FFButtonOptions(
                     width: 340,
                     height: 60,

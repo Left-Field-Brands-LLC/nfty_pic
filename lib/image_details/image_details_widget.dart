@@ -1,3 +1,4 @@
+import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../components/select_wallet_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -21,6 +22,13 @@ class ImageDetailsWidget extends StatefulWidget {
 
 class _ImageDetailsWidgetState extends State<ImageDetailsWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'image_details'});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +55,8 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget> {
             automaticallyImplyLeading: false,
             leading: InkWell(
               onTap: () async {
+                logFirebaseEvent('IMAGE_DETAILS_PAGE_Icon_swrtynm5_ON_TAP');
+                logFirebaseEvent('Icon_Navigate-Back');
                 context.pop();
               },
               child: Icon(
@@ -145,49 +155,54 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 30),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          await showModalBottomSheet(
-                            isScrollControlled: true,
-                            backgroundColor: Colors.transparent,
-                            context: context,
-                            builder: (context) {
-                              return Padding(
-                                padding: MediaQuery.of(context).viewInsets,
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.5,
-                                  child: SelectWalletWidget(),
-                                ),
-                              );
-                            },
-                          );
-                        },
-                        text: FFLocalizations.of(context).getText(
-                          'jm710wn9' /* Mint This Image */,
-                        ),
-                        options: FFButtonOptions(
-                          width: 270,
-                          height: 50,
-                          color: FlutterFlowTheme.of(context).primaryColor,
-                          textStyle:
-                              FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Roboto',
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
+                    if ((currentUserReference) !=
+                        (imageDetailsImagesRecord.createdBy))
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 30),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            logFirebaseEvent(
+                                'IMAGE_DETAILS_MINT_THIS_IMAGE_BTN_ON_TAP');
+                            logFirebaseEvent('Button_Bottom-Sheet');
+                            await showModalBottomSheet(
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              context: context,
+                              builder: (context) {
+                                return Padding(
+                                  padding: MediaQuery.of(context).viewInsets,
+                                  child: Container(
+                                    height: MediaQuery.of(context).size.height *
+                                        0.5,
+                                    child: SelectWalletWidget(),
                                   ),
-                          elevation: 3,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
+                                );
+                              },
+                            );
+                          },
+                          text: FFLocalizations.of(context).getText(
+                            'jm710wn9' /* Mint This Image */,
                           ),
-                          borderRadius: 8,
+                          options: FFButtonOptions(
+                            width: 270,
+                            height: 50,
+                            color: FlutterFlowTheme.of(context).primaryColor,
+                            textStyle:
+                                FlutterFlowTheme.of(context).subtitle2.override(
+                                      fontFamily: 'Roboto',
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                            elevation: 3,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 8,
+                          ),
                         ),
                       ),
-                    ),
                   ],
                 ),
               ),

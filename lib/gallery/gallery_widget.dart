@@ -16,6 +16,12 @@ class _GalleryWidgetState extends State<GalleryWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'gallery'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -51,9 +57,7 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                         queryBuilder: (imagesRecord) => imagesRecord
                             .where('created_by',
                                 isEqualTo: currentUserReference)
-                            .where('minted', isEqualTo: false)
-                            .where('purchased_by',
-                                isEqualTo: currentUserReference),
+                            .orderBy('created_timestamp', descending: true),
                       ),
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.

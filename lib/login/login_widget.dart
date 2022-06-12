@@ -26,6 +26,7 @@ class _LoginWidgetState extends State<LoginWidget> {
     emailAddressController = TextEditingController();
     passwordController = TextEditingController();
     passwordVisibility = false;
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'login'});
   }
 
   @override
@@ -82,6 +83,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                         ),
                         InkWell(
                           onTap: () async {
+                            logFirebaseEvent(
+                                'LOGIN_PAGE_Container_h7zy1ckn_ON_TAP');
+                            logFirebaseEvent('Container_Navigate-To');
                             context.goNamed(
                               'register',
                               extra: <String, dynamic>{
@@ -102,6 +106,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                             alignment: AlignmentDirectional(-1, 0),
                             child: InkWell(
                               onTap: () async {
+                                logFirebaseEvent(
+                                    'LOGIN_PAGE_Text_8i334boj_ON_TAP');
+                                logFirebaseEvent('Text_Navigate-To');
                                 context.pushNamed('register');
                               },
                               child: Text(
@@ -267,6 +274,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                 children: [
                   FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent('LOGIN_PAGE_LOGIN_BTN_ON_TAP');
+                      logFirebaseEvent('Button_Auth');
                       GoRouter.of(context).prepareAuthEvent();
 
                       final user = await signInWithEmail(
@@ -312,6 +321,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                 children: [
                   FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent(
+                          'LOGIN_PAGE_CONTINUE_AS_GUEST_BTN_ON_TAP');
+                      logFirebaseEvent('Button_Navigate-To');
                       context.goNamed('home');
                     },
                     text: FFLocalizations.of(context).getText(
@@ -354,6 +366,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                             size: 20,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent('LOGIN_PAGE_google_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_Navigate-To');
                             context.goNamed('home');
                           },
                         ),
@@ -369,6 +383,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                             size: 20,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent('LOGIN_PAGE_apple_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_Navigate-To');
                             context.goNamed('home');
                           },
                         ),
@@ -384,6 +400,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                             size: 20,
                           ),
                           onPressed: () async {
+                            logFirebaseEvent('LOGIN_PAGE_facebookF_ICN_ON_TAP');
+                            logFirebaseEvent('IconButton_Navigate-To');
                             context.goNamed('home');
                           },
                         ),
