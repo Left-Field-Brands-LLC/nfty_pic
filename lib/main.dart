@@ -83,6 +83,7 @@ class _MyAppState extends State<MyApp> {
         Locale('es', ''),
         Locale('ja', ''),
         Locale('hi', ''),
+        Locale('ro', ''),
       ],
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
