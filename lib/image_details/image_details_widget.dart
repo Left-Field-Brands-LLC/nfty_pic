@@ -90,9 +90,7 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'xb91bsxc' /* Title */,
-                              ),
+                              imageDetailsImagesRecord.title,
                               style: FlutterFlowTheme.of(context).title3,
                             ),
                           ],
