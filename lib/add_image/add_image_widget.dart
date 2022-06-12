@@ -191,7 +191,7 @@ class _AddImageWidgetState extends State<AddImageWidget> {
                                   decoration: InputDecoration(
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'dqchwjl7' /* Enter post details here... */,
+                                      'dqchwjl7' /* Enter  details here... */,
                                     ),
                                     hintStyle:
                                         FlutterFlowTheme.of(context).bodyText2,
@@ -284,7 +284,7 @@ class _AddImageWidgetState extends State<AddImageWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 30),
               child: FFButtonWidget(
                 onPressed: () async {
-                  logFirebaseEvent('ADD_IMAGE_PAGE_ADD_IMAGE_BTN_ON_TAP');
+                  logFirebaseEvent('ADD_IMAGE_PAGE_SUBMIT_BTN_ON_TAP');
                   logFirebaseEvent('Button_Backend-Call');
 
                   final imagesCreateData = createImagesRecordData(
@@ -297,9 +297,11 @@ class _AddImageWidgetState extends State<AddImageWidget> {
                     imagePathUrl: uploadedFileUrl,
                   );
                   await ImagesRecord.collection.doc().set(imagesCreateData);
+                  logFirebaseEvent('Button_Navigate-To');
+                  context.pushNamed('home');
                 },
                 text: FFLocalizations.of(context).getText(
-                  '0o56ybrt' /* Add Image */,
+                  '0o56ybrt' /* Submit */,
                 ),
                 options: FFButtonOptions(
                   width: 270,

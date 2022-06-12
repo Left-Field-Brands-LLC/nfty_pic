@@ -220,6 +220,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
                           ),
+                      keyboardType: TextInputType.emailAddress,
                     ),
                   ),
                   Padding(
