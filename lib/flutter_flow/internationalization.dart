@@ -110,14 +110,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // home
   {
-    '31jphqnk': {
-      'en': 'NFTy',
-      'fr': '',
-    },
-    'wttsuovx': {
-      'en': 'Pic',
-      'fr': '',
-    },
     '7ftte96a': {
       'en': 'Quick Filters',
       'fr': '',
@@ -127,7 +119,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
     },
     'tscs9p3j': {
-      'en': 'Home',
+      'en': '',
       'fr': '',
     },
   },
@@ -135,6 +127,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'cpnh24yx': {
       'en': 'Add Image',
+      'fr': '',
+    },
+    'zjdajffj': {
+      'en': 'Title',
+      'fr': '',
+    },
+    'vhsc00r4': {
+      'en': '',
       'fr': '',
     },
     'dqchwjl7': {
@@ -196,31 +196,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // profile
   {
-    'pqqv1wlq': {
-      'en': '[User Name Here]',
-      'fr': '',
-    },
-    'xmcu37pq': {
-      'en': 'User.name@domainname.com',
-      'fr': '',
-    },
-    'o8x7t5yc': {
+    'zo3z0hzr': {
       'en': 'Account Settings',
       'fr': '',
     },
-    'p5gczf51': {
+    'rkp94nvg': {
       'en': 'Order History',
       'fr': '',
     },
-    '72l02lmm': {
+    '5ahstnmb': {
       'en': 'Settings',
       'fr': '',
     },
-    '9kqgwunf': {
+    '08jiwnwu': {
       'en': 'Notifications',
       'fr': '',
     },
-    'aw25gdz4': {
+    'uv6a3b0u': {
       'en': 'Change Password',
       'fr': '',
     },
@@ -228,84 +220,72 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Logout',
       'fr': '',
     },
-    '4x1jz1za': {
+    'rxsskr1h': {
       'en': 'My Profile',
       'fr': '',
     },
   },
   // gallery
   {
-    'wafhrray': {
+    'h4ytfpny': {
       'en': 'My Images',
       'fr': '',
     },
-    '377jlqj5': {
+    '9l2qt5ts': {
       'en': 'Category Name',
       'fr': '',
     },
-    '3slie2k2': {
+    'm665hss1': {
       'en': 'Category Name',
       'fr': '',
     },
-    'riu68oo0': {
+    'yw0opxuw': {
       'en': 'Category Name',
       'fr': '',
     },
-    '31rwuf4k': {
+    '0f249y6h': {
       'en': 'Category Name',
       'fr': '',
     },
-    'rwqnip23': {
+    'sm9frw0y': {
       'en': 'Category Name',
       'fr': '',
     },
-    'si1jfplb': {
+    'ah6hzirx': {
       'en': 'Category Name',
       'fr': '',
     },
-    'r68lm9kp': {
+    'bagwo8sg': {
       'en': 'Category Name',
       'fr': '',
     },
-    'c50ikrnp': {
+    'ajxoawky': {
       'en': 'Category Name',
       'fr': '',
     },
-    'hz2mpn6t': {
+    'gi1xbnsl': {
       'en': 'Category Name',
       'fr': '',
     },
-    'v1m7jtv5': {
+    '5locvm1a': {
       'en': 'Category Name',
       'fr': '',
     },
-    '1na1y5p9': {
+    '6d9bs74r': {
       'en': 'Category Name',
       'fr': '',
     },
-    'rav712bv': {
+    '0evj07aa': {
       'en': 'Category Name',
       'fr': '',
     },
-    '3jfikike': {
-      'en': 'Home',
+    'ls0esmbo': {
+      'en': '',
       'fr': '',
     },
   },
   // view_all
   {
-    'dgfaviqw': {
-      'en': 'Fitness',
-      'fr': '',
-    },
-    'fvp0sr4a': {
-      'en': 'Title Will Go Here',
-      'fr': '',
-    },
-    '78ptr3yv': {
-      'en': 'Name',
-      'fr': '',
-    },
     'gfnne6mq': {
       'en': 'Fitness',
       'fr': '',
@@ -355,6 +335,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'vg4txoec': {
       'en': 'Wallet Name',
+      'fr': '',
+    },
+  },
+  // side_nav
+  {
+    'gij00pdz': {
+      'en': 'Home',
+      'fr': '',
+    },
+    'unqnq43g': {
+      'en': 'My Images',
+      'fr': '',
+    },
+    'b1ga56xm': {
+      'en': 'Wallet',
+      'fr': '',
+    },
+    'onnv0g6e': {
+      'en': 'Profile',
       'fr': '',
     },
   },

@@ -1,4 +1,3 @@
-import '../components/navigation_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +21,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'My Images',
+          FFLocalizations.of(context).getText(
+            'h4ytfpny' /* My Images */,
+          ),
           style: FlutterFlowTheme.of(context).title2,
         ),
         actions: [],
@@ -88,7 +89,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 12, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      '9l2qt5ts' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).subtitle1,
                                   ),
@@ -97,7 +100,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 4, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      'm665hss1' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyText2,
                                   ),
@@ -141,7 +146,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 12, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      'yw0opxuw' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).subtitle1,
                                   ),
@@ -150,7 +157,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 4, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      '0f249y6h' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyText2,
                                   ),
@@ -194,7 +203,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 12, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      'sm9frw0y' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).subtitle1,
                                   ),
@@ -203,7 +214,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 4, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      'ah6hzirx' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyText2,
                                   ),
@@ -247,7 +260,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 12, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      'bagwo8sg' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).subtitle1,
                                   ),
@@ -256,7 +271,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 4, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      'ajxoawky' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyText2,
                                   ),
@@ -300,7 +317,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 12, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      'gi1xbnsl' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).subtitle1,
                                   ),
@@ -309,7 +328,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 4, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      '5locvm1a' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyText2,
                                   ),
@@ -353,7 +374,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 12, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      '6d9bs74r' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).subtitle1,
                                   ),
@@ -362,7 +385,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       8, 4, 0, 0),
                                   child: Text(
-                                    'Category Name',
+                                    FFLocalizations.of(context).getText(
+                                      '0evj07aa' /* Category Name */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyText2,
                                   ),
@@ -377,7 +402,6 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                 ],
               ),
             ),
-            NavigationWidget(),
           ],
         ),
       ),
