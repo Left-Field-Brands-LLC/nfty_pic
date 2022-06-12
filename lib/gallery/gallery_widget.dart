@@ -1,3 +1,5 @@
+import '../auth/auth_util.dart';
+import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -44,359 +46,91 @@ class _GalleryWidgetState extends State<GalleryWidget> {
                 children: [
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(10, 12, 0, 0),
-                    child: Wrap(
-                      spacing: 10,
-                      runSpacing: 8,
-                      alignment: WrapAlignment.start,
-                      crossAxisAlignment: WrapCrossAlignment.start,
-                      direction: Axis.horizontal,
-                      runAlignment: WrapAlignment.start,
-                      verticalDirection: VerticalDirection.down,
-                      clipBehavior: Clip.none,
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          height: 190,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 4,
-                                color: Color(0x230E151B),
-                                offset: Offset(0, 2),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-                                    width: double.infinity,
-                                    height: 115,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 12, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '9l2qt5ts' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).subtitle1,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 4, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'm665hss1' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyText2,
-                                  ),
-                                ),
-                              ],
+                    child: StreamBuilder<List<ImagesRecord>>(
+                      stream: queryImagesRecord(
+                        queryBuilder: (imagesRecord) => imagesRecord
+                            .where('created_by',
+                                isEqualTo: currentUserReference)
+                            .where('minted', isEqualTo: false)
+                            .where('purchased_by',
+                                isEqualTo: currentUserReference),
+                      ),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 50,
+                              height: 50,
+                              child: CircularProgressIndicator(
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                              ),
                             ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          height: 190,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 4,
-                                color: Color(0x230E151B),
-                                offset: Offset(0, 2),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-                                    width: double.infinity,
-                                    height: 115,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 12, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'yw0opxuw' /* Category Name */,
+                          );
+                        }
+                        List<ImagesRecord> wrapImagesRecordList = snapshot.data;
+                        return Wrap(
+                          spacing: 10,
+                          runSpacing: 8,
+                          alignment: WrapAlignment.start,
+                          crossAxisAlignment: WrapCrossAlignment.start,
+                          direction: Axis.horizontal,
+                          runAlignment: WrapAlignment.start,
+                          verticalDirection: VerticalDirection.down,
+                          clipBehavior: Clip.none,
+                          children: List.generate(wrapImagesRecordList.length,
+                              (wrapIndex) {
+                            final wrapImagesRecord =
+                                wrapImagesRecordList[wrapIndex];
+                            return Container(
+                              width: MediaQuery.of(context).size.width * 0.45,
+                              height: 190,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x230E151B),
+                                    offset: Offset(0, 2),
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.network(
+                                        wrapImagesRecord.imagePathUrl,
+                                        width: double.infinity,
+                                        height: 115,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).subtitle1,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 4, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '0f249y6h' /* Category Name */,
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          8, 12, 0, 0),
+                                      child: Text(
+                                        wrapImagesRecord.title,
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle1,
+                                      ),
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyText2,
-                                  ),
+                                  ],
                                 ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          height: 190,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 4,
-                                color: Color(0x230E151B),
-                                offset: Offset(0, 2),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-                                    width: double.infinity,
-                                    height: 115,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 12, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'sm9frw0y' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).subtitle1,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 4, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'ah6hzirx' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyText2,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          height: 190,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 4,
-                                color: Color(0x230E151B),
-                                offset: Offset(0, 2),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                                    width: double.infinity,
-                                    height: 115,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 12, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'bagwo8sg' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).subtitle1,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 4, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'ajxoawky' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyText2,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          height: 190,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 4,
-                                color: Color(0x230E151B),
-                                offset: Offset(0, 2),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                                    width: double.infinity,
-                                    height: 115,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 12, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'gi1xbnsl' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).subtitle1,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 4, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '5locvm1a' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyText2,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          height: 190,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 4,
-                                color: Color(0x230E151B),
-                                offset: Offset(0, 2),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                                    width: double.infinity,
-                                    height: 115,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 12, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '6d9bs74r' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).subtitle1,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8, 4, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '0evj07aa' /* Category Name */,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyText2,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
+                              ),
+                            );
+                          }),
+                        );
+                      },
                     ),
                   ),
                 ],

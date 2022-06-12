@@ -146,6 +146,49 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         shape: BoxShape.rectangle,
                       ),
+                      child: InkWell(
+                        onTap: () async {
+                          context.pushNamed('create_profile');
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'iv8odjr8' /* Edit Profile */,
+                                ),
+                                style: FlutterFlowTheme.of(context).bodyText1,
+                              ),
+                            ),
+                            Expanded(
+                              child: Align(
+                                alignment: AlignmentDirectional(0.9, 0),
+                                child: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Color(0xFF95A1AC),
+                                  size: 18,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        shape: BoxShape.rectangle,
+                      ),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [

@@ -132,6 +132,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => FilteredListWidget(
                 listSelected: params.getParam('listSelected', ParamType.String),
               ),
+            ),
+            FFRoute(
+              name: 'create_profile',
+              path: 'createProfile',
+              requireAuth: true,
+              builder: (context, params) => CreateProfileWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

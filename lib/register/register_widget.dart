@@ -387,7 +387,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                           .doc(user.uid)
                           .update(usersCreateData);
 
-                      context.goNamedAuth('home', mounted);
+                      context.pushNamedAuth('create_profile', mounted);
                     },
                     text: FFLocalizations.of(context).getText(
                       '98x3bhop' /* Get Started */,
