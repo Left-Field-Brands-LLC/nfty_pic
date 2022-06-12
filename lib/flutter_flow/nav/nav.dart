@@ -66,13 +66,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, _) =>
-          appStateNotifier.loggedIn ? HomeWidget() : LoginWidget(),
+          appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomeWidget() : LoginWidget(),
+              appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
           routes: [
             FFRoute(
               name: 'login',
@@ -88,13 +88,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'home',
               path: 'home',
               requireAuth: true,
-              builder: (context, params) => HomeWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'home')
+                  : HomeWidget(),
             ),
             FFRoute(
               name: 'add_image',
               path: 'addImage',
               requireAuth: true,
-              builder: (context, params) => AddImageWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'add_image')
+                  : AddImageWidget(),
             ),
             FFRoute(
               name: 'image_details',
@@ -106,13 +110,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'profile',
               path: 'profile',
               requireAuth: true,
-              builder: (context, params) => ProfileWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'profile')
+                  : ProfileWidget(),
             ),
             FFRoute(
               name: 'gallery',
               path: 'gallery',
               requireAuth: true,
-              builder: (context, params) => GalleryWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'gallery')
+                  : GalleryWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

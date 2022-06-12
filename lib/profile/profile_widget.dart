@@ -1,4 +1,4 @@
-import '../components/navigation_widget.dart';
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -23,7 +23,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'My Profile',
+          FFLocalizations.of(context).getText(
+            'rxsskr1h' /* My Profile */,
+          ),
           style: FlutterFlowTheme.of(context).title2,
         ),
         actions: [],
@@ -51,15 +53,17 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          Container(
-                            width: 76,
-                            height: 76,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.asset(
-                              'assets/images/UI_avatar@2x.png',
+                          AuthUserStreamWidget(
+                            child: Container(
+                              width: 76,
+                              height: 76,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.network(
+                                currentUserPhoto,
+                              ),
                             ),
                           ),
                         ],
@@ -69,9 +73,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                            child: Text(
-                              '[User Name Here]',
-                              style: FlutterFlowTheme.of(context).title1,
+                            child: AuthUserStreamWidget(
+                              child: Text(
+                                currentUserDisplayName,
+                                style: FlutterFlowTheme.of(context).title1,
+                              ),
                             ),
                           ),
                         ],
@@ -85,7 +91,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                               child: Text(
-                                'User.name@domainname.com',
+                                currentUserEmail,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
                                     .override(
@@ -115,7 +121,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(24, 12, 0, 12),
                     child: Text(
-                      'Account Settings',
+                      FFLocalizations.of(context).getText(
+                        'zo3z0hzr' /* Account Settings */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1,
                     ),
                   ),
@@ -145,7 +153,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                             child: Text(
-                              'Order History',
+                              FFLocalizations.of(context).getText(
+                                'rkp94nvg' /* Order History */,
+                              ),
                               style: FlutterFlowTheme.of(context).bodyText1,
                             ),
                           ),
@@ -184,7 +194,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                               child: Text(
-                                'Settings',
+                                FFLocalizations.of(context).getText(
+                                  '5ahstnmb' /* Settings */,
+                                ),
                                 style: FlutterFlowTheme.of(context).bodyText1,
                               ),
                             ),
@@ -224,7 +236,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                               child: Text(
-                                'Notifications',
+                                FFLocalizations.of(context).getText(
+                                  '08jiwnwu' /* Notifications */,
+                                ),
                                 style: FlutterFlowTheme.of(context).bodyText1,
                               ),
                             ),
@@ -264,7 +278,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                               child: Text(
-                                'Change Password',
+                                FFLocalizations.of(context).getText(
+                                  'uv6a3b0u' /* Change Password */,
+                                ),
                                 style: FlutterFlowTheme.of(context).bodyText1,
                               ),
                             ),
@@ -293,8 +309,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            GoRouter.of(context).prepareAuthEvent();
+                            await signOut();
+                            context.goNamedAuth('login', mounted);
                           },
                           text: FFLocalizations.of(context).getText(
                             'tnvl2w1b' /* Logout */,
@@ -325,7 +343,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
               ],
             ),
           ),
-          NavigationWidget(),
         ],
       ),
     );
