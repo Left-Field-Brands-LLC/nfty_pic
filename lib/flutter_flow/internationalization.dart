@@ -9,7 +9,7 @@ class FFLocalizations {
   static FFLocalizations of(BuildContext context) =>
       Localizations.of<FFLocalizations>(context, FFLocalizations);
 
-  static List<String> languages() => ['en', 'fr', 'es', 'ja', 'hi'];
+  static List<String> languages() => ['en', 'fr', 'es', 'ja', 'hi', 'ro'];
 
   String get languageCode => locale.languageCode;
   int get languageIndex => languages().contains(languageCode)
@@ -25,8 +25,9 @@ class FFLocalizations {
     String esText = '',
     String jaText = '',
     String hiText = '',
+    String roText = '',
   }) =>
-      [enText, frText, esText, jaText, hiText][languageIndex] ?? '';
+      [enText, frText, esText, jaText, hiText, roText][languageIndex] ?? '';
 }
 
 class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
@@ -53,6 +54,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'S&#39;identifier',
       'hi': 'साइन इन करें',
       'ja': 'ログイン',
+      'ro': 'Conectare',
     },
     'udckyewa': {
       'en': 'Sign Up',
@@ -60,6 +62,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'S&#39;inscrire',
       'hi': 'साइन अप करें',
       'ja': 'サインアップ',
+      'ro': 'Inscrie-te',
     },
     '0q4l2uj1': {
       'en': 'Sign in to share more photos',
@@ -67,6 +70,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Connectez-vous pour partager plus de photos',
       'hi': 'अधिक फ़ोटो साझा करने के लिए साइन इन करें',
       'ja': 'サインインして他の写真を共有する',
+      'ro': 'Conectați-vă pentru a partaja mai multe fotografii',
     },
     'gpfk24pf': {
       'en': 'Email',
@@ -74,6 +78,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'E-mail',
       'hi': 'ईमेल',
       'ja': 'Eメール',
+      'ro': 'E-mail',
     },
     'peewk13o': {
       'en': 'Password',
@@ -81,6 +86,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Mot de passe',
       'hi': 'पासवर्ड',
       'ja': 'パスワード',
+      'ro': 'Parola',
     },
     '6ca18yw1': {
       'en': 'Login',
@@ -88,6 +94,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Connexion',
       'hi': 'लॉग इन करें',
       'ja': 'ログイン',
+      'ro': 'Autentificare',
     },
     'vairuprg': {
       'en': 'Continue as Guest',
@@ -95,6 +102,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Continuer en tant qu&#39;invité',
       'hi': 'अतिथि के रूप में जारी रखें',
       'ja': 'ゲストとして続行',
+      'ro': 'Continuați ca invitat',
     },
   },
   // register
@@ -105,6 +113,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'S&#39;identifier',
       'hi': 'साइन इन करें',
       'ja': 'ログイン',
+      'ro': 'Conectare',
     },
     'vukd35yc': {
       'en': 'Sign Up',
@@ -112,6 +121,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'S&#39;inscrire',
       'hi': 'साइन अप करें',
       'ja': 'サインアップ',
+      'ro': 'Inscrie-te',
     },
     '810ueda4': {
       'en': 'Get started by creating an account below.',
@@ -119,6 +129,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Commencez par créer un compte ci-dessous.',
       'hi': 'नीचे एक खाता बनाकर आरंभ करें।',
       'ja': '以下のアカウントを作成して始めましょう。',
+      'ro': 'Începeți prin a crea un cont mai jos.',
     },
     'i45t3dhw': {
       'en': 'Email',
@@ -126,6 +137,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'E-mail',
       'hi': 'ईमेल',
       'ja': 'Eメール',
+      'ro': 'E-mail',
     },
     's2hvwgvr': {
       'en': 'Password',
@@ -133,6 +145,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Mot de passe',
       'hi': 'पासवर्ड',
       'ja': 'パスワード',
+      'ro': 'Parola',
     },
     '7we2h5nv': {
       'en': 'Confirm Passward',
@@ -140,6 +153,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Confirmer le mot de passe',
       'hi': 'पासवार्ड की पुष्टि करें',
       'ja': 'パスワードを確認する',
+      'ro': 'Confirmați Passward',
     },
     '98x3bhop': {
       'en': 'Get Started',
@@ -147,6 +161,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Commencer',
       'hi': 'शुरू हो जाओ',
       'ja': 'はじめに',
+      'ro': 'Incepe',
     },
     'dvxg2h1n': {
       'en': 'Continue as Guest',
@@ -154,6 +169,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Continuer en tant qu&#39;invité',
       'hi': 'अतिथि के रूप में जारी रखें',
       'ja': 'ゲストとして続行',
+      'ro': 'Continuați ca invitat',
     },
   },
   // home
@@ -164,6 +180,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Filtres rapides',
       'hi': 'त्वरित फ़िल्टर',
       'ja': 'クイックフィルター',
+      'ro': 'Filtre rapide',
     },
     'j465ims6': {
       'en': 'All Images',
@@ -171,6 +188,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Toutes les photos',
       'hi': 'सभी छवियां',
       'ja': 'すべての画像',
+      'ro': 'Toate Imaginile',
     },
     'tscs9p3j': {
       'en': '',
@@ -178,6 +196,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
   },
   // add_image
@@ -188,6 +207,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Ajouter une image',
       'hi': 'छवि जोड़ें',
       'ja': '画像を追加',
+      'ro': 'Adauga imagine',
     },
     'becrjldq': {
       'en': 'Title',
@@ -195,6 +215,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Titre',
       'hi': 'शीर्षक',
       'ja': '題名',
+      'ro': 'Titlu',
     },
     'vhsc00r4': {
       'en': '',
@@ -202,6 +223,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'dqchwjl7': {
       'en': 'Enter post details here...',
@@ -209,6 +231,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Entrez les détails du poste ici...',
       'hi': 'यहां पोस्ट विवरण दर्ज करें...',
       'ja': 'ここに投稿の詳細を入力してください...',
+      'ro': 'Introdu aici detaliile postării...',
     },
     'zri0jsmt': {
       'en': 'Art',
@@ -216,6 +239,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Art',
       'hi': 'कला',
       'ja': '美術',
+      'ro': 'Artă',
     },
     'uc7w4dzs': {
       'en': 'Portrait',
@@ -223,6 +247,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Portrait',
       'hi': 'चित्र',
       'ja': 'ポートレート',
+      'ro': 'Portret',
     },
     'zsgrqb3j': {
       'en': 'Landscape',
@@ -230,6 +255,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Paysage',
       'hi': 'परिदृश्य',
       'ja': '風景',
+      'ro': 'Peisaj',
     },
     '5a9unxg1': {
       'en': 'Health',
@@ -237,6 +263,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Santé',
       'hi': 'स्वास्थ्य',
       'ja': '健康',
+      'ro': 'Sănătate',
     },
     '24nbnkji': {
       'en': 'Fitness',
@@ -244,6 +271,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Aptitude',
       'hi': 'स्वास्थ्य',
       'ja': 'フィットネス',
+      'ro': 'Fitness',
     },
     'z5eid5sv': {
       'en': 'Select a Tag',
@@ -251,6 +279,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Sélectionnez une balise',
       'hi': 'एक टैग चुनें',
       'ja': 'タグを選択してください',
+      'ro': 'Selectați o etichetă',
     },
     '0o56ybrt': {
       'en': 'Add Image',
@@ -258,6 +287,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Ajouter une image',
       'hi': 'छवि जोड़ें',
       'ja': '画像を追加',
+      'ro': 'Adauga imagine',
     },
   },
   // image_details
@@ -268,6 +298,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Titre',
       'hi': 'शीर्षक',
       'ja': '題名',
+      'ro': 'Titlu',
     },
     'jm710wn9': {
       'en': 'Mint This Image',
@@ -275,6 +306,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Mentir cette image',
       'hi': 'मिंट दिस इमेज',
       'ja': 'この画像をミント',
+      'ro': 'Mint această imagine',
     },
   },
   // profile
@@ -285,6 +317,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Paramètres du compte',
       'hi': 'अकाउंट सेटिंग',
       'ja': 'アカウント設定',
+      'ro': 'Setările contului',
     },
     'iv8odjr8': {
       'en': 'Edit Profile',
@@ -292,6 +325,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Editer le profil',
       'hi': 'प्रोफ़ाइल संपादित करें',
       'ja': 'プロファイル編集',
+      'ro': 'Editează profilul',
     },
     'rkp94nvg': {
       'en': 'Order History',
@@ -299,6 +333,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Historique des commandes',
       'hi': 'आदेश इतिहास',
       'ja': '注文履歴',
+      'ro': 'Istoric comenzi',
     },
     '5ahstnmb': {
       'en': 'Settings',
@@ -306,6 +341,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Réglages',
       'hi': 'समायोजन',
       'ja': '設定',
+      'ro': 'Setări',
     },
     '08jiwnwu': {
       'en': 'Notifications',
@@ -313,6 +349,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Avis',
       'hi': 'सूचनाएं',
       'ja': '通知',
+      'ro': 'Notificări',
     },
     'uv6a3b0u': {
       'en': 'Change Password',
@@ -320,6 +357,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Changer le mot de passe',
       'hi': 'पासवर्ड बदलें',
       'ja': 'パスワードを変更する',
+      'ro': 'Schimbaţi parola',
     },
     'tnvl2w1b': {
       'en': 'Logout',
@@ -327,6 +365,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Se déconnecter',
       'hi': 'लॉग आउट',
       'ja': 'ログアウト',
+      'ro': 'Deconectare',
     },
     'rxsskr1h': {
       'en': 'My Profile',
@@ -334,6 +373,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Mon profil',
       'hi': 'मेरी प्रोफाइल',
       'ja': '私のプロフィール',
+      'ro': 'Profilul meu',
     },
   },
   // gallery
@@ -344,6 +384,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Mes photos',
       'hi': 'मेरी छवियां',
       'ja': '私の画像',
+      'ro': 'Imaginile mele',
     },
     'yw0opxuw': {
       'en': 'Category Name',
@@ -351,6 +392,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     '0f249y6h': {
       'en': 'Category Name',
@@ -358,6 +400,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     'sm9frw0y': {
       'en': 'Category Name',
@@ -365,6 +408,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     'ah6hzirx': {
       'en': 'Category Name',
@@ -372,6 +416,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     'bagwo8sg': {
       'en': 'Category Name',
@@ -379,6 +424,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     'ajxoawky': {
       'en': 'Category Name',
@@ -386,6 +432,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     'gi1xbnsl': {
       'en': 'Category Name',
@@ -393,6 +440,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     '5locvm1a': {
       'en': 'Category Name',
@@ -400,6 +448,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     '6d9bs74r': {
       'en': 'Category Name',
@@ -407,6 +456,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     '0evj07aa': {
       'en': 'Category Name',
@@ -414,6 +464,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom de catégorie',
       'hi': 'श्रेणी नाम',
       'ja': '種別名',
+      'ro': 'Numele categoriei',
     },
     'ls0esmbo': {
       'en': '',
@@ -421,6 +472,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
   },
   // filtered_list
@@ -431,6 +483,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Air Jordan XXXVI',
       'hi': 'एयर जॉर्डन XXXVI',
       'ja': 'エアジョーダンXXXVI',
+      'ro': 'Air Jordan XXXVI',
     },
     'n9mz1ttw': {
       'en': '\$185.00',
@@ -438,6 +491,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '185,00 \$',
       'hi': '\$185.00',
       'ja': '\$ 185.00',
+      'ro': '185,00 USD',
     },
     'yyxzmxjh': {
       'en': 'Produced by Nike',
@@ -445,6 +499,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Produit par Nike',
       'hi': 'Nike . की बनाई फ़िल्में-टीवी शो',
       'ja': 'ナイキプロデュース',
+      'ro': 'Produs de Nike',
     },
     'chvyb8j6': {
       'en': 'Lebron 19',
@@ -452,6 +507,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Lebron 19',
       'hi': 'लेब्रोन 19',
       'ja': 'レブロン19',
+      'ro': 'Lebron 19',
     },
     '7euz6n4e': {
       'en': '\$200.00',
@@ -459,6 +515,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '200,00 \$',
       'hi': '\$200.00',
       'ja': '\$ 200.00',
+      'ro': '200,00 USD',
     },
     'nepvnxci': {
       'en': 'Produced by Nike',
@@ -466,6 +523,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Produit par Nike',
       'hi': 'Nike . की बनाई फ़िल्में-टीवी शो',
       'ja': 'ナイキプロデュース',
+      'ro': 'Produs de Nike',
     },
     'nlhp4lvh': {
       'en': 'Products',
@@ -473,6 +531,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Des produits',
       'hi': 'उत्पादों',
       'ja': '製品',
+      'ro': 'Produse',
     },
   },
   // create_profile
@@ -483,6 +542,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Changer la photo',
       'hi': 'तस्वीर बदलिये',
       'ja': '写真を変更する',
+      'ro': 'Schimbare fotografie',
     },
     'lxyesg45': {
       'en': 'Your Name',
@@ -490,6 +550,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'votre nom',
       'hi': 'तुम्हारा  नाम',
       'ja': 'あなたの名前',
+      'ro': 'Numele dumneavoastră',
     },
     'e0nyhw05': {
       'en': 'Email Address',
@@ -497,6 +558,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Adresse e-mail',
       'hi': 'ईमेल पता',
       'ja': '電子メールアドレス',
+      'ro': 'Adresa de e-mail',
     },
     'qo1a3i8y': {
       'en': 'Save Changes',
@@ -504,6 +566,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Sauvegarder les modifications',
       'hi': 'परिवर्तनों को सुरक्षित करें',
       'ja': '変更内容を保存',
+      'ro': 'Salvează modificările',
     },
     'd3nki2e5': {
       'en': 'Create Profile',
@@ -511,6 +574,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Créer un profil',
       'hi': 'प्रोफ़ाइल बनाने',
       'ja': 'プロフィール作成',
+      'ro': 'Creeaza un profil',
     },
   },
   // view_all
@@ -521,6 +585,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Aptitude',
       'hi': 'स्वास्थ्य',
       'ja': 'フィットネス',
+      'ro': 'Fitness',
     },
     'i14o5fou': {
       'en': 'Title Will Go Here',
@@ -528,6 +593,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Le titre ira ici',
       'hi': 'शीर्षक यहाँ जाएगा',
       'ja': 'タイトルはここにあります',
+      'ro': 'Titlul va merge aici',
     },
     'ahrhx0uy': {
       'en': 'Name',
@@ -535,6 +601,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom',
       'hi': 'नाम',
       'ja': '名前',
+      'ro': 'Nume',
     },
     'qfj4enl3': {
       'en': 'Fitness',
@@ -542,6 +609,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Aptitude',
       'hi': 'स्वास्थ्य',
       'ja': 'フィットネス',
+      'ro': 'Fitness',
     },
     'q3inqq28': {
       'en': 'Title Will Go Here',
@@ -549,6 +617,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Le titre ira ici',
       'hi': 'शीर्षक यहाँ जाएगा',
       'ja': 'タイトルはここにあります',
+      'ro': 'Titlul va merge aici',
     },
     'ktph72qg': {
       'en': 'Name',
@@ -556,6 +625,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom',
       'hi': 'नाम',
       'ja': '名前',
+      'ro': 'Nume',
     },
   },
   // select_wallet
@@ -566,6 +636,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Sélectionnez le portefeuille avec lequel frapper',
       'hi': 'टकसाल के साथ वॉलेट का चयन करें',
       'ja': 'ミントするウォレットを選択',
+      'ro': 'Selectați Portofel cu care să moneți',
     },
     '0vbn1js5': {
       'en': 'Subtitle for the needs of description',
@@ -573,6 +644,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Sous-titre pour les besoins de la description',
       'hi': 'विवरण की आवश्यकता के लिए उपशीर्षक',
       'ja': '説明の必要性のための字幕',
+      'ro': 'Subtitrare pentru nevoile de descriere',
     },
     'y77dn71t': {
       'en': 'Wallet Name',
@@ -580,6 +652,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom du portefeuille',
       'hi': 'वॉलेट का नाम',
       'ja': 'ウォレット名',
+      'ro': 'Numele portofelului',
     },
     'ag3dxfw6': {
       'en': 'Wallet Name',
@@ -587,6 +660,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom du portefeuille',
       'hi': 'वॉलेट का नाम',
       'ja': 'ウォレット名',
+      'ro': 'Numele portofelului',
     },
     '80fywaiw': {
       'en': 'Wallet Name',
@@ -594,6 +668,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom du portefeuille',
       'hi': 'वॉलेट का नाम',
       'ja': 'ウォレット名',
+      'ro': 'Numele portofelului',
     },
     'vg4txoec': {
       'en': 'Wallet Name',
@@ -601,6 +676,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Nom du portefeuille',
       'hi': 'वॉलेट का नाम',
       'ja': 'ウォレット名',
+      'ro': 'Numele portofelului',
     },
   },
   // side_nav
@@ -611,6 +687,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Maison',
       'hi': 'घर',
       'ja': '家',
+      'ro': 'Acasă',
     },
     'unqnq43g': {
       'en': 'My Images',
@@ -618,6 +695,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Mes photos',
       'hi': 'मेरी छवियां',
       'ja': '私の画像',
+      'ro': 'Imaginile mele',
     },
     'b1ga56xm': {
       'en': 'Wallet',
@@ -625,6 +703,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Porte monnaie',
       'hi': 'बटुआ',
       'ja': '財布',
+      'ro': 'Portofel',
     },
     'onnv0g6e': {
       'en': 'Profile',
@@ -632,6 +711,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Profil',
       'hi': 'प्रोफ़ाइल',
       'ja': 'プロフィール',
+      'ro': 'Profil',
     },
   },
   // Miscellaneous
@@ -642,6 +722,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     '9gqod0s3': {
       'en': '',
@@ -649,6 +730,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'ak939j8r': {
       'en': '',
@@ -656,6 +738,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'ouq1epka': {
       'en': '',
@@ -663,6 +746,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'etrlxh5j': {
       'en': '',
@@ -670,6 +754,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'wmse70v8': {
       'en': '',
@@ -677,6 +762,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'joxdko4k': {
       'en': '',
@@ -684,6 +770,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     '3zelzkh3': {
       'en': '',
@@ -691,6 +778,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'm0je7m28': {
       'en': '',
@@ -698,6 +786,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'th2t3fkv': {
       'en': '',
@@ -705,6 +794,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'fn7vrpot': {
       'en': '',
@@ -712,6 +802,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'lsfrxubu': {
       'en': '',
@@ -719,6 +810,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'v1mbqlmp': {
       'en': '',
@@ -726,6 +818,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'o7217nr3': {
       'en': '',
@@ -733,6 +826,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     '5gfyfwn3': {
       'en': '',
@@ -740,6 +834,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'fohrnqzh': {
       'en': '',
@@ -747,6 +842,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     '6pznnr4d': {
       'en': '',
@@ -754,6 +850,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'm1mn81ml': {
       'en': '',
@@ -761,6 +858,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'awlqjzpi': {
       'en': '',
@@ -768,6 +866,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     'xervdfaz': {
       'en': '',
@@ -775,6 +874,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     '1hszujkv': {
       'en': '',
@@ -782,6 +882,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
     '441imbj7': {
       'en': '',
@@ -789,6 +890,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': '',
       'hi': '',
       'ja': '',
+      'ro': '',
     },
   },
 ].reduce((a, b) => a..addAll(b));
