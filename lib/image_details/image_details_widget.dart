@@ -69,7 +69,7 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Image.network(
-                        'http://picture-cdn.wheretoget.it/w9ts01-i.jpg',
+                        imageDetailsImagesRecord.imagePathUrl,
                         width: MediaQuery.of(context).size.width,
                         height: 400,
                         fit: BoxFit.cover,

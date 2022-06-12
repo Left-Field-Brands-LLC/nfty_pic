@@ -187,6 +187,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Account Settings',
       'fr': '',
     },
+    'iv8odjr8': {
+      'en': 'Edit Profile',
+      'fr': '',
+    },
     'rkp94nvg': {
       'en': 'Order History',
       'fr': '',
@@ -216,14 +220,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'h4ytfpny': {
       'en': 'My Images',
-      'fr': '',
-    },
-    '9l2qt5ts': {
-      'en': 'Category Name',
-      'fr': '',
-    },
-    'm665hss1': {
-      'en': 'Category Name',
       'fr': '',
     },
     'yw0opxuw': {
@@ -299,6 +295,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'nlhp4lvh': {
       'en': 'Products',
+      'fr': '',
+    },
+  },
+  // create_profile
+  {
+    'feczwekr': {
+      'en': 'Change Photo',
+      'fr': '',
+    },
+    'wwe8co64': {
+      'en': 'Your Name',
+      'fr': '',
+    },
+    'j42ouhz0': {
+      'en': 'Email Address',
+      'fr': '',
+    },
+    'phwdww13': {
+      'en': 'Save Changes',
+      'fr': '',
+    },
+    'uceb672m': {
+      'en': 'Create Profile',
       'fr': '',
     },
   },

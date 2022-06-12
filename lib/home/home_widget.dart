@@ -134,17 +134,28 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     FlutterFlowTheme.of(context).primaryBtnText,
                                 shape: BoxShape.circle,
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  FaIcon(
-                                    FontAwesomeIcons.portrait,
-                                    color:
-                                        FlutterFlowTheme.of(context).grayIcon,
-                                    size: 24,
-                                  ),
-                                ],
+                              child: InkWell(
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'filtered_list',
+                                    queryParams: {
+                                      'listSelected': serializeParam(
+                                          'Portrait', ParamType.String),
+                                    }.withoutNulls,
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    FaIcon(
+                                      FontAwesomeIcons.portrait,
+                                      color:
+                                          FlutterFlowTheme.of(context).grayIcon,
+                                      size: 24,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             Container(
@@ -155,17 +166,28 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     FlutterFlowTheme.of(context).primaryBtnText,
                                 shape: BoxShape.circle,
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.landscape_rounded,
-                                    color:
-                                        FlutterFlowTheme.of(context).grayIcon,
-                                    size: 24,
-                                  ),
-                                ],
+                              child: InkWell(
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'filtered_list',
+                                    queryParams: {
+                                      'listSelected': serializeParam(
+                                          'Landscape', ParamType.String),
+                                    }.withoutNulls,
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.landscape_rounded,
+                                      color:
+                                          FlutterFlowTheme.of(context).grayIcon,
+                                      size: 24,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             Container(
@@ -176,17 +198,28 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     FlutterFlowTheme.of(context).primaryBtnText,
                                 shape: BoxShape.circle,
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.favorite,
-                                    color:
-                                        FlutterFlowTheme.of(context).grayIcon,
-                                    size: 24,
-                                  ),
-                                ],
+                              child: InkWell(
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'filtered_list',
+                                    queryParams: {
+                                      'listSelected': serializeParam(
+                                          'Health', ParamType.String),
+                                    }.withoutNulls,
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.favorite,
+                                      color:
+                                          FlutterFlowTheme.of(context).grayIcon,
+                                      size: 24,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             Container(
@@ -197,17 +230,28 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     FlutterFlowTheme.of(context).primaryBtnText,
                                 shape: BoxShape.circle,
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.fitness_center,
-                                    color:
-                                        FlutterFlowTheme.of(context).grayIcon,
-                                    size: 24,
-                                  ),
-                                ],
+                              child: InkWell(
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'filtered_list',
+                                    queryParams: {
+                                      'listSelected': serializeParam(
+                                          'Fitness', ParamType.String),
+                                    }.withoutNulls,
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.fitness_center,
+                                      color:
+                                          FlutterFlowTheme.of(context).grayIcon,
+                                      size: 24,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
