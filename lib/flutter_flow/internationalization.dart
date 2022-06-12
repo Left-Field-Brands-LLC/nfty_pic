@@ -129,7 +129,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Add Image',
       'fr': '',
     },
-    'xdmvovaq': {
+    'becrjldq': {
       'en': 'Title',
       'fr': '',
     },
@@ -165,10 +165,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Select a Tag',
       'fr': '',
     },
-    '9wo34cb6': {
-      'en': 'Tag Location',
-      'fr': '',
-    },
     '0o56ybrt': {
       'en': 'Add Image',
       'fr': '',
@@ -178,15 +174,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'xb91bsxc': {
       'en': 'Title',
-      'fr': '',
-    },
-    '4sdrlfkq': {
-      'en': 'Owner Name',
-      'fr': '',
-    },
-    '63zrb3wn': {
-      'en':
-          'Sporty style from the archives inspires this iconic track top. A stand-up collar and the signature sheen of tricot give it a retro vibe. Made for relaxing between sessions, the full-zip jacket has a recycled polyester build.',
       'fr': '',
     },
     'jm710wn9': {
@@ -286,31 +273,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // filtered_list
   {
-    'b667d5es': {
+    '7p88eu90': {
       'en': 'Air Jordan XXXVI',
       'fr': '',
     },
-    'fxdg4407': {
+    'n9mz1ttw': {
       'en': '\$185.00',
       'fr': '',
     },
-    'grenzlkw': {
+    'yyxzmxjh': {
       'en': 'Produced by Nike',
       'fr': '',
     },
-    '0ovibslj': {
+    'chvyb8j6': {
       'en': 'Lebron 19',
       'fr': '',
     },
-    '97d3zjr8': {
+    '7euz6n4e': {
       'en': '\$200.00',
       'fr': '',
     },
-    'xyrgoh0s': {
+    'nepvnxci': {
       'en': 'Produced by Nike',
       'fr': '',
     },
-    't0t7fzax': {
+    'nlhp4lvh': {
       'en': 'Products',
       'fr': '',
     },

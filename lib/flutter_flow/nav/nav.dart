@@ -104,7 +104,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'image_details',
               path: 'imageDetails',
               requireAuth: true,
-              builder: (context, params) => ImageDetailsWidget(),
+              builder: (context, params) => ImageDetailsWidget(
+                imageDetails: params.getParam(
+                    'imageDetails', ParamType.DocumentReference, 'images'),
+              ),
             ),
             FFRoute(
               name: 'profile',

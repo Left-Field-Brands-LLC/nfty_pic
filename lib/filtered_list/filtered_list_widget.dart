@@ -215,114 +215,131 @@ class _FilteredListWidgetState extends State<FilteredListWidget>
                               return Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     16, 0, 16, 12),
-                                child: Container(
-                                  width: 100,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 5,
-                                        color: Color(0x1F000000),
-                                        offset: Offset(0, 2),
-                                      )
-                                    ],
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(0),
-                                          bottomRight: Radius.circular(0),
-                                          topLeft: Radius.circular(12),
-                                          topRight: Radius.circular(12),
+                                child: InkWell(
+                                  onTap: () async {
+                                    context.pushNamed(
+                                      'image_details',
+                                      queryParams: {
+                                        'imageDetails': serializeParam(
+                                            listViewImagesRecord.reference,
+                                            ParamType.DocumentReference),
+                                      }.withoutNulls,
+                                    );
+                                  },
+                                  child: Container(
+                                    width: 100,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 5,
+                                          color: Color(0x1F000000),
+                                          offset: Offset(0, 2),
+                                        )
+                                      ],
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(0),
+                                            bottomRight: Radius.circular(0),
+                                            topLeft: Radius.circular(12),
+                                            topRight: Radius.circular(12),
+                                          ),
+                                          child: Image.network(
+                                            listViewImagesRecord.imagePathUrl,
+                                            width: double.infinity,
+                                            height: 240,
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                        child: Image.network(
-                                          'https://static.nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/e5e376f2-7b53-49fc-9720-0e1d69ff0fb9/zion-1-basketball-shoes-bJ0hLJ.png',
-                                          width: double.infinity,
-                                          height: 240,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16, 12, 16, 0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              listViewImagesRecord.title,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .title2,
-                                            ),
-                                            if ((listViewImagesRecord.amount) !=
-                                                0.0)
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  16, 12, 16, 0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
                                               Text(
-                                                listViewImagesRecord.amount
-                                                    .toString(),
+                                                listViewImagesRecord.title,
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .subtitle1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryColor,
-                                                        ),
+                                                        .title2,
                                               ),
-                                          ],
-                                        ).animated([
-                                          animationsMap[
-                                              'rowOnPageLoadAnimation1']
-                                        ]),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16, 0, 16, 16),
-                                        child: StreamBuilder<UsersRecord>(
-                                          stream: UsersRecord.getDocument(
-                                              listViewImagesRecord.createdBy),
-                                          builder: (context, snapshot) {
-                                            // Customize what your widget looks like when it's loading.
-                                            if (!snapshot.hasData) {
-                                              return Center(
-                                                child: SizedBox(
-                                                  width: 50,
-                                                  height: 50,
-                                                  child:
-                                                      CircularProgressIndicator(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryColor,
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            final rowUsersRecord =
-                                                snapshot.data;
-                                            return Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
+                                              if ((listViewImagesRecord
+                                                      .amount) !=
+                                                  0.0)
                                                 Text(
-                                                  rowUsersRecord.displayName,
+                                                  listViewImagesRecord.amount
+                                                      .toString(),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2,
+                                                      .subtitle1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryColor,
+                                                      ),
                                                 ),
-                                              ],
-                                            ).animated([
-                                              animationsMap[
-                                                  'rowOnPageLoadAnimation2']
-                                            ]);
-                                          },
+                                            ],
+                                          ).animated([
+                                            animationsMap[
+                                                'rowOnPageLoadAnimation1']
+                                          ]),
                                         ),
-                                      ),
-                                    ],
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  16, 0, 16, 16),
+                                          child: StreamBuilder<UsersRecord>(
+                                            stream: UsersRecord.getDocument(
+                                                listViewImagesRecord.createdBy),
+                                            builder: (context, snapshot) {
+                                              // Customize what your widget looks like when it's loading.
+                                              if (!snapshot.hasData) {
+                                                return Center(
+                                                  child: SizedBox(
+                                                    width: 50,
+                                                    height: 50,
+                                                    child:
+                                                        CircularProgressIndicator(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryColor,
+                                                    ),
+                                                  ),
+                                                );
+                                              }
+                                              final rowUsersRecord =
+                                                  snapshot.data;
+                                              return Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Text(
+                                                    rowUsersRecord.displayName,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText2,
+                                                  ),
+                                                ],
+                                              ).animated([
+                                                animationsMap[
+                                                    'rowOnPageLoadAnimation2']
+                                              ]);
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ).animated([
                                   animationsMap['containerOnPageLoadAnimation1']
