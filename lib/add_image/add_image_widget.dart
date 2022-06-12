@@ -2,13 +2,10 @@ import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../backend/firebase_storage/storage.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
-import '../flutter_flow/flutter_flow_place_picker.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../flutter_flow/place.dart';
 import '../flutter_flow/upload_media.dart';
-import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +22,6 @@ class _AddImageWidgetState extends State<AddImageWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
   String dropDownValue;
-  var placePickerValue = FFPlace();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -146,7 +142,10 @@ class _AddImageWidgetState extends State<AddImageWidget> {
                                   controller: textController1,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Title',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      'becrjldq' /* Title */,
+                                    ),
                                     hintStyle:
                                         FlutterFlowTheme.of(context).bodyText2,
                                     enabledBorder: OutlineInputBorder(
@@ -278,40 +277,7 @@ class _AddImageWidgetState extends State<AddImageWidget> {
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
-              child: FlutterFlowPlacePicker(
-                iOSGoogleMapsApiKey: '',
-                androidGoogleMapsApiKey: '',
-                webGoogleMapsApiKey: '',
-                onSelect: (place) => setState(() => placePickerValue = place),
-                defaultText: FFLocalizations.of(context).getText(
-                  '9wo34cb6' /* Tag Location */,
-                ),
-                icon: Icon(
-                  Icons.place,
-                  color: Color(0xFF95A1AC),
-                  size: 16,
-                ),
-                buttonOptions: FFButtonOptions(
-                  width: double.infinity,
-                  height: 50,
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                        fontFamily: 'Lexend Deca',
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
-                  borderSide: BorderSide(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
-                    width: 2,
-                  ),
-                  borderRadius: 8,
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 30),
               child: FFButtonWidget(
                 onPressed: () async {
                   final imagesCreateData = createImagesRecordData(
@@ -319,7 +285,6 @@ class _AddImageWidgetState extends State<AddImageWidget> {
                     createdBy: currentUserReference,
                     description: textController2.text,
                     tag: dropDownValue,
-                    location: placePickerValue.latLng,
                     title: textController1.text,
                     minted: false,
                     imagePathUrl: uploadedFileUrl,

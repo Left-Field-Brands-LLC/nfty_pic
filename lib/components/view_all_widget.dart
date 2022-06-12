@@ -48,7 +48,13 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
               child: InkWell(
                 onTap: () async {
-                  context.pushNamed('image_details');
+                  context.pushNamed(
+                    'image_details',
+                    queryParams: {
+                      'imageDetails': serializeParam(wrapImagesRecord.reference,
+                          ParamType.DocumentReference),
+                    }.withoutNulls,
+                  );
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.45,
