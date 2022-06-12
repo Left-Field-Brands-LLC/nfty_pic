@@ -226,7 +226,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ro': '',
     },
     'dqchwjl7': {
-      'en': 'Enter post details here...',
+      'en': 'Enter  details here...',
       'es': 'Ingrese los detalles de la publicación aquí...',
       'fr': 'Entrez les détails du poste ici...',
       'hi': 'यहां पोस्ट विवरण दर्ज करें...',
@@ -282,7 +282,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ro': 'Selectați o etichetă',
     },
     '0o56ybrt': {
-      'en': 'Add Image',
+      'en': 'Submit',
       'es': 'Añadir imagen',
       'fr': 'Ajouter une image',
       'hi': 'छवि जोड़ें',
