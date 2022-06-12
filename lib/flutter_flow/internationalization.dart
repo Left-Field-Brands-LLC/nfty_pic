@@ -292,14 +292,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // image_details
   {
-    'xb91bsxc': {
-      'en': 'Title',
-      'es': 'Título',
-      'fr': 'Titre',
-      'hi': 'शीर्षक',
-      'ja': '題名',
-      'ro': 'Titlu',
-    },
     'jm710wn9': {
       'en': 'Mint This Image',
       'es': 'Menta esta imagen',
@@ -527,7 +519,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'nlhp4lvh': {
       'en': 'Products',
-      'es': 'productos',
+      'es': 'Productos',
       'fr': 'Des produits',
       'hi': 'उत्पादों',
       'ja': '製品',
