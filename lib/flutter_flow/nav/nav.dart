@@ -121,6 +121,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'gallery')
                   : GalleryWidget(),
+            ),
+            FFRoute(
+              name: 'filtered_list',
+              path: 'filteredList',
+              requireAuth: true,
+              builder: (context, params) => FilteredListWidget(
+                listSelected: params.getParam('listSelected', ParamType.String),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
