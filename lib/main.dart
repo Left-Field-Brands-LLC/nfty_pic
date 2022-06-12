@@ -80,6 +80,9 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: const [
         Locale('en', ''),
         Locale('fr', ''),
+        Locale('es', ''),
+        Locale('ja', ''),
+        Locale('hi', ''),
       ],
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),

@@ -16,6 +16,12 @@ class _HomeWidgetState extends State<HomeWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'home'});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -104,6 +110,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               child: InkWell(
                                 onTap: () async {
+                                  logFirebaseEvent(
+                                      'HOME_PAGE_Column_pocdwji6_ON_TAP');
+                                  logFirebaseEvent('Column_Navigate-To');
                                   context.pushNamed(
                                     'filtered_list',
                                     queryParams: {
@@ -136,6 +145,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               child: InkWell(
                                 onTap: () async {
+                                  logFirebaseEvent(
+                                      'HOME_PAGE_Column_sktg8qdt_ON_TAP');
+                                  logFirebaseEvent('Column_Navigate-To');
                                   context.pushNamed(
                                     'filtered_list',
                                     queryParams: {
@@ -168,6 +180,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               child: InkWell(
                                 onTap: () async {
+                                  logFirebaseEvent(
+                                      'HOME_PAGE_Column_bm2t9nxr_ON_TAP');
+                                  logFirebaseEvent('Column_Navigate-To');
                                   context.pushNamed(
                                     'filtered_list',
                                     queryParams: {
@@ -200,6 +215,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               child: InkWell(
                                 onTap: () async {
+                                  logFirebaseEvent(
+                                      'HOME_PAGE_Column_t4j2yc73_ON_TAP');
+                                  logFirebaseEvent('Column_Navigate-To');
                                   context.pushNamed(
                                     'filtered_list',
                                     queryParams: {
@@ -232,6 +250,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               child: InkWell(
                                 onTap: () async {
+                                  logFirebaseEvent(
+                                      'HOME_PAGE_Column_8thtdzh4_ON_TAP');
+                                  logFirebaseEvent('Column_Navigate-To');
                                   context.pushNamed(
                                     'filtered_list',
                                     queryParams: {

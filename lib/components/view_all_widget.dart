@@ -48,6 +48,8 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
               child: InkWell(
                 onTap: () async {
+                  logFirebaseEvent('VIEW_ALL_COMP_Container_g75qjek5_ON_TAP');
+                  logFirebaseEvent('Container_Navigate-To');
                   context.pushNamed(
                     'image_details',
                     queryParams: {

@@ -32,6 +32,8 @@ class _NavigationWidgetState extends State<NavigationWidget> {
               children: [
                 InkWell(
                   onTap: () async {
+                    logFirebaseEvent('NAVIGATION_Container_0afh2j3k_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     context.pushNamed('home');
                   },
                   child: Container(
@@ -58,6 +60,8 @@ class _NavigationWidgetState extends State<NavigationWidget> {
                 ),
                 InkWell(
                   onTap: () async {
+                    logFirebaseEvent('NAVIGATION_Container_sn82yxf6_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     context.pushNamed('gallery');
                   },
                   child: Container(
@@ -84,6 +88,8 @@ class _NavigationWidgetState extends State<NavigationWidget> {
                 ),
                 InkWell(
                   onTap: () async {
+                    logFirebaseEvent('NAVIGATION_Container_9yzp3isz_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     context.pushNamed('add_image');
                   },
                   child: Container(
@@ -131,6 +137,8 @@ class _NavigationWidgetState extends State<NavigationWidget> {
                 ),
                 InkWell(
                   onTap: () async {
+                    logFirebaseEvent('NAVIGATION_Container_ams88p2y_ON_TAP');
+                    logFirebaseEvent('Container_Navigate-To');
                     context.pushNamed('profile');
                   },
                   child: Container(

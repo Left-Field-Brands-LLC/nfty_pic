@@ -136,6 +136,9 @@ class _FilteredListWidgetState extends State<FilteredListWidget>
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
       this,
     );
+
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'filtered_list'});
   }
 
   @override
@@ -163,7 +166,9 @@ class _FilteredListWidgetState extends State<FilteredListWidget>
           key: scaffoldKey,
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-            automaticallyImplyLeading: false,
+            iconTheme:
+                IconThemeData(color: FlutterFlowTheme.of(context).black600),
+            automaticallyImplyLeading: true,
             title: Text(
               widget.listSelected,
               style: FlutterFlowTheme.of(context).title2,
@@ -217,6 +222,9 @@ class _FilteredListWidgetState extends State<FilteredListWidget>
                                     16, 0, 16, 12),
                                 child: InkWell(
                                   onTap: () async {
+                                    logFirebaseEvent(
+                                        'FILTERED_LIST_Container_fsuc6hvt_ON_TAP');
+                                    logFirebaseEvent('Container_Navigate-To');
                                     context.pushNamed(
                                       'image_details',
                                       queryParams: {
